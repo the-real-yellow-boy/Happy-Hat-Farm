@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+</head>
+<style>
+p{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+section.prueba>p{
+    font-size: 30px;
+    align-content: center;
+    text-justify:justify;
+    padding: 100px 60px 20px 70px;
+}
+a{
+    color: aliceblue;
+}
+
+.noticias-falsas>h1{
+    text-align: left;
+    font-size: 25px;
+}
+.noticias-falsas>h2{
+    text-align: left;
+    font-size: 25px;
+}
+.noticias-falsas>h3{
+    text-align: left;
+    font-size: 25px;
+}
+img.hat{
+    height: 85px;
+    width: 95px;    
+}
+img.meat{
+    height: 85px;
+    width: 95px;
+       
+}
+h3{
+    color: black;
+}
+.respuestas>form{
+    padding-left: 70px; ;
+}
+.col-2{
+    padding: 30px;
+}
+nav{
+    text-align: right;
+    padding: 30px 20px 0 0;
+}
+
+nav > a{
+    color: rgb(54, 2, 2);
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 18px;
+}
+section.h-header>h1{
+    display: flex;
+    text-align: right;
+    padding: 30px 20px 0 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+</style>
+<body>
+    <div class="container_fluid" style="background-color: rgba(224, 41, 9, 0.849);">
+        <div class="row">
+            <div class="col">
+                <header style="color: rgba(0, 0, 0, 0.705);">
+                    <nav>
+                        <a href="index.html">Home</a>
+                        <a href="Fake news.html">Fake news</a>
+                        <a href="SPK.html">S.P.K.</a>
+                        <a href="Human resources.html">Human Resources</a>
+                     </nav>
+                     <section class="h-header">
+                     <h1>Happy Hat Farm</h1>
+                     </section>
+                </header>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-9">
+                <section class="prueba">
+                <P>Para empezar este pequeño gran trabajo primero debemos saber que eras un consumidor común de <span>Happy Hat Farm.</span><br>porfavor introduzca que hacia happy hat farm en sus inicios</P>
+                </section>
+                <section class="respuestas">
+                    <form id="myform" onSubmit="validarNro(event)">
+                        <label for="nro">
+                        </label>
+                        <input type="text" id="nro" required="0">
+                        <input type="submit" value="enviar">
+                    </form>
+                </section>
+            </div>
+            <div class="col-2">
+                <section class="noticias-falsas">
+                <h1>happy hat farm volvera...</h1> <img src="img/gray-161386.svg" alt="" class="hat"><p>happy hat farm volvera a solo hacer sombreros, regresando a sus inicios.</p>
+                <h2>happy hat farm está...</h1> <img src="img/pig-47252_640.png" alt="" class="meat"><p>happy hat farm esta modificando la carne para <strong style="background-color:black;">[redactado}</strong> con<strong style="background-color:black;">[redactaado]</strong> </p>
+                <h3><strong style="background-color: rgb(0, 0, 0);">redactado</strong>...</h3><img src="img/codigo 199587.png" alt=""><p>Happy hat farm</p>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script>
+        function validarNro(event)
+    {
+        let nro = document.getElementById("nro").value;
+        let form=document.getElementById("myform");
+        if(form.checkValidity())
+        { 
+            event.preventDefault();
+            if(nro=="sombreros")
+            {
+                window.location="index.html";
+            }
+            else{window.location="SPK.html";}
+            
+        };
+    }
+    </script>
+</body>
+</html>
